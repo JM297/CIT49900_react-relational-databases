@@ -1,12 +1,24 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import fire from "../../firebase/Fire";
+import {useSelector} from 'react-redux'
 
 export default function Nav(){
+    const signedIn=useSelector(state=>state.signedIn);
+    const signOut = () =>{
+        fire.auth().signOut().then(function() {
+            // Sign-out successful.
+        }).catch(function(error) {
+            // An error happened.
+        });
+    };
     return(
         <div className="nav">
-            <Link style={{marginRight: 10, marginLeft: 10}} to={"/"}>Home</Link>
-            <Link style={{marginRight: 10}} to={"/user"}>User</Link>
-            <Link style={{marginRight: 10}} to={"/admin"}>Admin</Link>
+            <Link style={{marginRight: 10, marginLeft: 10}} to={"/user"}>User</Link>
+            {signedIn?<Link style={{marginRight: 10}} to={"/admin"}>Admin</Link>:""}
+            {!signedIn?<Link style={{marginRight: 10}} to={"/signup"}>Register</Link>:""}
+            {!signedIn?<Link style={{marginRight: 10}} to={"/signin"}>Sign In</Link>:""}
+            {signedIn?<Link to={"/signin"} onClick={signOut}>Sign Out</Link>:""}
         </div>
     )
 }

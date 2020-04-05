@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff052f07-b9a7-40bb-a136-1e190f72f05c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection/Collection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection/MyCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection/MyCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/item/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/setActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/setActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Josh\Documents\React Projects\react-relational-databases\src\components\userPage" />
       <recent name="C:\Users\Josh\Documents\React Projects\react-relational-databases\src\components\item" />
     </key>
   </component>
@@ -93,7 +95,10 @@
       <updated>1583439621722</updated>
       <workItem from="1583439628022" duration="5812000" />
       <workItem from="1583524522895" duration="29158000" />
-      <workItem from="1583641943928" duration="3248000" />
+      <workItem from="1583641943928" duration="13123000" />
+      <workItem from="1583901780468" duration="1478000" />
+      <workItem from="1584871528435" duration="28000" />
+      <workItem from="1585801931849" duration="26857000" />
     </task>
     <servers />
   </component>
@@ -101,22 +106,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="746" height="187" key="GridCell.Tab.0.bottom" timestamp="1583544168660">
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586019849554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="187" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583544168660" />
-    <state width="746" height="187" key="GridCell.Tab.0.center" timestamp="1583544168660">
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586019849554" />
+    <state width="745" height="184" key="GridCell.Tab.0.bottom" timestamp="1586004207594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="187" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583544168660" />
-    <state width="746" height="187" key="GridCell.Tab.0.left" timestamp="1583544168660">
+    <state width="745" height="184" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586004207594" />
+    <state width="745" height="184" key="GridCell.Tab.0.center" timestamp="1586004207594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="187" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583544168660" />
-    <state width="746" height="187" key="GridCell.Tab.0.right" timestamp="1583544168660">
+    <state width="745" height="184" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586004207594" />
+    <state width="745" height="184" key="GridCell.Tab.0.left" timestamp="1586004207594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="187" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583544168660" />
+    <state width="745" height="184" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586004207594" />
+    <state width="745" height="184" key="GridCell.Tab.0.right" timestamp="1586004207594">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="745" height="184" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586004207594" />
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586019717560">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1586019717560" />
     <state x="307" y="180" width="760" height="810" key="dock-window-1" timestamp="1583611452609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

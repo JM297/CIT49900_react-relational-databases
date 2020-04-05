@@ -5,10 +5,11 @@ import fire from "../../firebase/Fire";
 export default function Item(props){
     const db=fire.firestore();
     const [page,setPage]=useState([]);
+    let user = fire.auth().currentUser;
 
     useEffect(()=> {
         let someStuff = [];
-        if(props.match.path==="/user/collection/item/:id"){
+        if(props.match.path==="/collection/item/:id"){
             db.collection("collection").doc(props.match.params.id).get().then(function (doc) {
                 const object = doc.data();
                 let item = {
@@ -20,7 +21,7 @@ export default function Item(props){
                 setPage(someStuff);
             });
         } else {
-            db.collection("users").doc("B1YaeD5MwkpXevPHw7CC").collection("myCollection").doc(props.match.params.id).get().then(function (doc) {
+            db.collection("users").doc(user.uid).collection("myCollection").doc(props.match.params.id).get().then(function (doc) {
                 const object = doc.data();
                 let item = {
                     id: doc.id,
@@ -43,7 +44,7 @@ export default function Item(props){
     return(
         <>
             {renderPage}
-            {props.match.path==="/user/collection/item/:id"?<button><Link to={"/user/collection"}>Return</Link></button>:<button><Link to={"/user/my-collection"}>Return</Link></button>}
+            {props.match.path==="/collection/item/:id"?<Link to={"/collection"}><button>Return</button></Link>:<Link to={"/my-collection"}><button>Return</button></Link>}
         </>
     )
 }

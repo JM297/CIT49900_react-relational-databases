@@ -2,16 +2,25 @@
 const initState = {
     toggle: false,
     change:false,
+    signedIn:false,
+    realUser:{
+        id:"",
+        name:""
+    },
     sort: {
         type: {toggle:false, val:[]},
         color: {toggle:false,val:[]}
     },
-    user: {
-        firstName: "Luke",
-        lastName: "Jones",
-        country: "USA"
-    },
-    cart: []
+    cart: [],
+    colors: [
+        {name:"brown"},
+        {name:"blue"},
+        {name:"green"}
+    ],
+    types: [
+        {name:"shirt"},
+        {name:"pants"}
+    ]
 };
 
 // After we initialize our object, we have our rootReducer. This helps create our stuff with constants.
@@ -53,7 +62,7 @@ const rootReducer = (state=initState, action)=>{
                     val:orgArray
                 }
             }
-            }
+        }
     }
     if(action.type==="INIT_COLLECTION"){
         return{
@@ -65,6 +74,20 @@ const rootReducer = (state=initState, action)=>{
         return{
             ...state,
             change:!state.change
+        }
+    }
+    if(action.type==="CHECK_SIGN_IN"){
+        return{
+            ...state,
+            signedIn:action.check
+        }
+    }
+    if(action.type==="CURRENT_USER"){
+        return{
+            ...state,
+            realUser: {
+                name:action.user.displayName
+            }
         }
     }
     return state;
